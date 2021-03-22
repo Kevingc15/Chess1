@@ -58,73 +58,77 @@ public class GameHandler : MonoBehaviour
 
     void CrearPiezasBlancas()
     {
+        GameObject Game_Padre = GameObject.Find("Game");
+
         //PEONES
         for(int i = 0; i <= 7; i++)
         {
-            GameObject newPawn = Instantiate(objs[1]);
+            GameObject newPawn = Instantiate(objs[1], Game_Padre.transform);
             newPawn.transform.position = GameObject.Find("SpawnC").transform.position + new Vector3(offSet * 1, 0.02f, offSet * i);
         }
 
         //TORRES
-        GameObject newTorre = Instantiate(objs[2]);
+        GameObject newTorre = Instantiate(objs[2], Game_Padre.transform);
         newTorre.transform.position = GameObject.Find("SpawnC").transform.position + new Vector3(0, 0.02f, 0);
-        newTorre = Instantiate(objs[2]);
+        newTorre = Instantiate(objs[2], Game_Padre.transform);
         newTorre.transform.position = GameObject.Find("SpawnC").transform.position + new Vector3(0, 0.02f, offSet * 7);
 
         //Caballo
-        GameObject newCaballo = Instantiate(objs[3]);
+        GameObject newCaballo = Instantiate(objs[3], Game_Padre.transform);
         newCaballo.transform.position = GameObject.Find("SpawnC").transform.position + new Vector3(0, 0.02f, offSet * 1);
-        newCaballo = Instantiate(objs[3]);
+        newCaballo = Instantiate(objs[3], Game_Padre.transform);
         newCaballo.transform.position = GameObject.Find("SpawnC").transform.position + new Vector3(0, 0.02f, offSet * 6);
 
         //Alfil
-        GameObject newAlfil = Instantiate(objs[4]);
+        GameObject newAlfil = Instantiate(objs[4], Game_Padre.transform);
         newAlfil.transform.position = GameObject.Find("SpawnC").transform.position + new Vector3(0, 0.02f, offSet * 2);
-        newAlfil = Instantiate(objs[4]);
+        newAlfil = Instantiate(objs[4], Game_Padre.transform);
         newAlfil.transform.position = GameObject.Find("SpawnC").transform.position + new Vector3(0, 0.02f, offSet * 5);
 
         //Reina
-        GameObject newReina = Instantiate(objs[5]);
+        GameObject newReina = Instantiate(objs[5], Game_Padre.transform);
         newReina.transform.position = GameObject.Find("SpawnC").transform.position + new Vector3(0, 0.02f, offSet * 3);
 
         //Rey
-        GameObject newRey = Instantiate(objs[6]);
+        GameObject newRey = Instantiate(objs[6], Game_Padre.transform);
         newRey.transform.position = GameObject.Find("SpawnC").transform.position + new Vector3(0, 0.02f, offSet * 4);
 
     }
 
     void CrearPiezasNegras()
     {
+        GameObject Game_Padre = GameObject.Find("Game");
+
         //PEONES
         for (int i = 0; i <= 7; i++)
         {
-            GameObject newPawn = Instantiate(objs[7]);
+            GameObject newPawn = Instantiate(objs[7], Game_Padre.transform);
             newPawn.transform.position = GameObject.Find("SpawnC").transform.position + new Vector3(offSet * 6, 0.02f, offSet * i);
         }
         //TORRES
-        GameObject newTorre = Instantiate(objs[8]);
+        GameObject newTorre = Instantiate(objs[8], Game_Padre.transform);
         newTorre.transform.position = GameObject.Find("SpawnC").transform.position + new Vector3(offSet * 7, 0.02f, 0);
-        newTorre = Instantiate(objs[8]);
+        newTorre = Instantiate(objs[8], Game_Padre.transform);
         newTorre.transform.position = GameObject.Find("SpawnC").transform.position + new Vector3(offSet * 7, 0.02f, offSet * 7);
 
         //Caballo
-        GameObject newCaballo = Instantiate(objs[9]);
+        GameObject newCaballo = Instantiate(objs[9], Game_Padre.transform);
         newCaballo.transform.position = GameObject.Find("SpawnC").transform.position + new Vector3(offSet * 7, 0.02f, offSet * 1);
-        newCaballo = Instantiate(objs[9]);
+        newCaballo = Instantiate(objs[9], Game_Padre.transform);
         newCaballo.transform.position = GameObject.Find("SpawnC").transform.position + new Vector3(offSet * 7, 0.02f, offSet * 6);
 
         //Alfil
-        GameObject newAlfil = Instantiate(objs[10]);
+        GameObject newAlfil = Instantiate(objs[10], Game_Padre.transform);
         newAlfil.transform.position = GameObject.Find("SpawnC").transform.position + new Vector3(offSet * 7, 0.02f, offSet * 2);
-        newAlfil = Instantiate(objs[10]);
+        newAlfil = Instantiate(objs[10], Game_Padre.transform);
         newAlfil.transform.position = GameObject.Find("SpawnC").transform.position + new Vector3(offSet * 7, 0.02f, offSet * 5);
 
         //Reina
-        GameObject newReina = Instantiate(objs[11]);
+        GameObject newReina = Instantiate(objs[11], Game_Padre.transform);
         newReina.transform.position = GameObject.Find("SpawnC").transform.position + new Vector3(offSet * 7, 0.02f, offSet * 3);
 
         //Rey
-        GameObject newRey = Instantiate(objs[12]);
+        GameObject newRey = Instantiate(objs[12], Game_Padre.transform);
         newRey.transform.position = GameObject.Find("SpawnC").transform.position + new Vector3(offSet * 7, 0.02f, offSet * 4);
 
     }
