@@ -4,22 +4,41 @@ using UnityEngine;
 
 public class Alfil : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
+   
 
     private void OnMouseUp()
     {
-        GameObject.Find("GameHandler").GetComponent<GameHandler>().pTarget = gameObject;
+        if (GameObject.Find("GameHandler").GetComponent<GameHandler>().pTarget)
+        {
 
+            if (GameObject.Find("GameHandler").GetComponent<GameHandler>().pTarget.tag == transform.tag)
+            {
+                Seleccionar();
+            }
+            else
+            {
+                if (GameObject.Find("Select"))
+                {
+                    Destroy(GameObject.Find("Select"));
+                }
+                GameObject.Find("GameHandler").GetComponent<GameHandler>().pTarget.transform.position = new Vector3(transform.position.x, GameObject.Find("GameHandler").GetComponent<GameHandler>().pTarget.transform.position.y, transform.position.z);
+                GameObject.Find("GameHandler").GetComponent<GameHandler>().CambiarTurno();
+                Destroy(gameObject);
+            }
+        }
+        else
+        {
+            if ((GameObject.Find("GameHandler").GetComponent<GameHandler>().turno && transform.tag == "Negro") || (!GameObject.Find("GameHandler").GetComponent<GameHandler>().turno && transform.tag == "Blanco"))
+            {
+                Seleccionar();
+            }
+        }
+    }
+
+    void Seleccionar()
+    {
+        GameObject.Find("GameHandler").GetComponent<GameHandler>().pTarget = gameObject;
         if (GameObject.Find("Select"))
         {
             Destroy(GameObject.Find("Select"));
@@ -27,6 +46,6 @@ public class Alfil : MonoBehaviour
 
         GameObject newSelect = Instantiate(GameObject.Find("GameHandler").GetComponent<GameHandler>().objs[13]);
         newSelect.name = "Select";
-        newSelect.transform.position = transform.position + new Vector3(0, 1.7f, 0);
+        newSelect.transform.position = transform.position + new Vector3(0, 0.7f, 0);
     }
 }

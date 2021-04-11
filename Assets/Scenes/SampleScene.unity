@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -376,13 +376,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.0013563521, y: -0.8553347, z: 0.5180692, w: 0.0022393442}
-  m_LocalPosition: {x: -0.19, y: 8.68, z: 5.27}
+  m_LocalRotation: {x: 0.0016268545, y: -0.7834973, z: 0.6213898, w: 0.002051267}
+  m_LocalPosition: {x: -0.21, y: 8.58, z: 2.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 62.406002, y: -179.70001, z: 0}
+  m_LocalEulerAnglesHint: {x: 76.836006, y: -179.70001, z: 0}
 --- !u!1 &1196128859
 GameObject:
   m_ObjectHideFlags: 0
@@ -414,20 +414,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objs:
   - {fileID: 1420673984272447022, guid: db190b25bc4ad07408da8610ff51a08d, type: 3}
-  - {fileID: 7714650355023401541, guid: 1e4c1b3334b70e8408aeaeeae88e1e8c, type: 3}
-  - {fileID: 8044410706319444066, guid: 93a1689afe738a346937f505c529f231, type: 3}
-  - {fileID: 6371311886096265533, guid: 46bb261f4aa4fdd45a99044c000a8552, type: 3}
-  - {fileID: 2603500713899392231, guid: ff678d7c1cf1ee648bb095f71042fe0b, type: 3}
-  - {fileID: 3569207858323663331, guid: 3d7dc6afc7e6c9548920a0026514464c, type: 3}
-  - {fileID: 1528305149922895488, guid: 28d2a8bd6c76e2a40acfd63f9b9e25f9, type: 3}
-  - {fileID: 3221893719114308961, guid: 5fcfbcf85a843764c90379e4d6121bf0, type: 3}
-  - {fileID: 1413525344113334280, guid: e40e017e89fd20242bf16d552ab669d8, type: 3}
-  - {fileID: 8730957540495452513, guid: 0a5344dff93e61a4a874da8b00458a22, type: 3}
-  - {fileID: 1414084009424568115, guid: 597f7e0f2e989344e875c9654ed77ea1, type: 3}
-  - {fileID: 1754773894072481073, guid: 22d2e6d937ff7184a8cd7d8276484055, type: 3}
-  - {fileID: 5404072452047678625, guid: 0790a48222e7f4840bae00cf1324ec6b, type: 3}
+  - {fileID: 3828899674268961020, guid: b77f96fb2f2852e4895a66b6f15335a2, type: 3}
+  - {fileID: 5027738486214441474, guid: d82b80b7fb870234ca96ddda3e41d0f2, type: 3}
+  - {fileID: 3936378776533650898, guid: 2181fd84b64098c4b8b66bb3adb908ee, type: 3}
+  - {fileID: 5790692530126617450, guid: c9f29f50d5eeb2c4d8527a1bd1de6f9e, type: 3}
+  - {fileID: 1529673101970843841, guid: 29cc5124a2e68944f94f9c2c0727489e, type: 3}
+  - {fileID: 1006244086441472521, guid: c130cf8b178035d4792ef03b2dec4f63, type: 3}
+  - {fileID: 3524633274462298977, guid: b482b1885e6e03f4cb6b1cd815f0be52, type: 3}
+  - {fileID: 1441096089391862113, guid: 690d34a420219b34999535c8089e6ab6, type: 3}
+  - {fileID: 7624760953816613845, guid: 62f3896d03ee8354d9fcd1a09ee916be, type: 3}
+  - {fileID: 1884093336291643437, guid: 9754f3b68c39e8041b73bbbb65f2ecd2, type: 3}
+  - {fileID: 137675833716711368, guid: 525baa9a541d66e469fbea0120dfe74e, type: 3}
+  - {fileID: 9123537065801046822, guid: 5bb222edf42a2664fbf96e95e8dd6f8e, type: 3}
   - {fileID: 5269879310496479622, guid: 7472d118050475b4b935114e0aad1292, type: 3}
   offSet: 0.996
+  turno: 0
   pTarget: {fileID: 0}
 --- !u!4 &1196128861
 Transform:
@@ -452,8 +453,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1269118990}
+  - component: {fileID: 1269118991}
   m_Layer: 0
-  m_Name: Game
+  m_Name: Game_Padre
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -473,6 +475,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1269118991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1269118989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d970381f058aed429d832054039bbeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1518094538 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4363527306552524, guid: 5b856ec4f8f8cb84f861f8f8a026c288,
